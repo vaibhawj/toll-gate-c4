@@ -21,4 +21,5 @@ jobs:
         with:
           commit_message: "Generate SVG files for PlantUML diagrams"
           branch: gh-pages
+          skip_dirty_check: true
       
