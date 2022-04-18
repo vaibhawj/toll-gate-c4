@@ -1,4 +1,4 @@
-@startuml tollgate-context
+@startuml
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
 
 title Context diagram for Toll gate system
