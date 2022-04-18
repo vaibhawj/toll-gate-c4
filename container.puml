@@ -1,0 +1,13 @@
+@startuml tollgate-container
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+
+title Container diagram for Toll gate system
+
+System_Ext(tag, "Fast tag")
+Container(scanner, "Scanner")
+
+Rel_L(scanner, tag, "scans tag")
+
+SHOW_LEGEND()
+
+@enduml
