@@ -6,7 +6,7 @@ title Context diagram for Toll gate system
 Person(user, "User")
 System(tgs, "Toll gate system")
 
-Rel_R(user, tgs, "passes through")
+Rel_R(user, tgs, "passes")
 
 SHOW_LEGEND()
 
