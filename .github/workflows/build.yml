@@ -10,16 +10,17 @@ jobs:
     steps:
       - name: Checkout Source
         uses: actions/checkout@v2
+        with:
+          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal token
+          fetch-depth: 0 # otherwise, you will failed to push refs to dest repo
 
       - name: Generate SVG Diagrams
         uses: holowinski/plantuml-github-action@main
         with:
           args: -v -tsvg docs/*.puml
 
-      - name: Push Local Changes
-        uses: stefanzweifel/git-auto-commit-action@v4.1.2
+      - name: Commit & Push changes
+        uses: actions-js/push@master
         with:
-          commit_message: "Generate SVG files for PlantUML diagrams"
-          branch: gh-pages
-          skip_dirty_check: true
+          github_token: ${{ secrets.GITHUB_TOKEN }}
       
