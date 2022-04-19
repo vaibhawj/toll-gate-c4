@@ -4,11 +4,9 @@
 title Context diagram for Toll gate system
 
 Person(user, "User")
-System(tgs, "Toll gate system")
+System(tgs, "Toll gate system") [[./container.svg]]
 
 Rel_R(user, tgs, "passes")
-
-url of tgs is [[./container.svg]]
 
 SHOW_LEGEND()
 
