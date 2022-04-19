@@ -8,6 +8,8 @@ System(tgs, "Toll gate system")
 
 Rel_R(user, tgs, "passes")
 
+url of tgs is [[./container.svg]]
+
 SHOW_LEGEND()
 
 @enduml
